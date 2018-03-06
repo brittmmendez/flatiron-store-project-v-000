@@ -17,7 +17,8 @@ group :test, :development do
   gem "selenium-webdriver"
   gem "better_errors"
   gem "binding_of_caller"
-  gem "factory_girl_rails"
+# gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "simplecov"
   gem "database_cleaner"
   gem "sqlite3"
@@ -29,3 +30,4 @@ end
 gem "bootstrap-sass", "~> 3.1.1"
 gem "faker"
 gem "friendly_id"
+gem 'devise'
