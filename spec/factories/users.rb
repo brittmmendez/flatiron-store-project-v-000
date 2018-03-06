@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
-    # confirmed_at Time.now
-     email "test@example.com"
-     password "please123"
+    name 'avi'
+    password 'super_secret'
+    email 'avi.turkewitz@test.cats'
   end
 end

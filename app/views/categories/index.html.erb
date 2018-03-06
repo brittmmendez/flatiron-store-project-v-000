@@ -3,5 +3,11 @@
 <ul>
 <% @categories.each do |category| %>
   <li><%= link_to category.title, category_path(category)  %></li>
+    <ul>
+    <% category.items.each do |item| %>
+      <li><%= link_to item.title, item_path(item)  %></li>
+    <% end %>
+    </ul>
+
 <% end %>
 </ul>

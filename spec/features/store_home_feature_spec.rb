@@ -65,6 +65,8 @@ describe 'Feature Test: Store', :type => :feature do
 
       context "logged in" do
         before(:each) do
+          User.create(password: 'super_secret',
+          email: 'avi.turkewitz@test.cats')
           @user = User.first
           login_as(@user, scope: :user)
         end
@@ -85,7 +87,7 @@ describe 'Feature Test: Store', :type => :feature do
           expect(page.current_path).to eq(store_path)
           expect(page).to have_link("sign in")
         end
-      end
+    end
 
       it 'has a Store Home Link' do
         visit store_path
