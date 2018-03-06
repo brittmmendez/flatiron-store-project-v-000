@@ -5,9 +5,10 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    cart = Cart.find params[:id]
-    cart.checkout
-    current_user.remove_cart
+    @cart = Cart.find params[:id]
+    @cart.checkout
+    @cart.delete
+
     redirect_to cart_path
   end
 
